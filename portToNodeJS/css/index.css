@@ -1,0 +1,86 @@
+html, body{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+}
+.grid {
+  width:100%;
+  height:100%;
+}
+/*.grid:after {
+  /* Fix container minimising to zero height (due to child floating elements)
+  content: "";
+  display: table;
+  clear: both;
+}*/
+.grid > div {
+  float:left;
+  height:100%;
+  background-color:#000;
+}
+#left {
+  width:70%;
+}
+/* Left Grid Configuration */
+.screen{
+	position:fixed;
+	top:0;
+	left:0;
+	width:70%;
+	height:100%;
+}
+#screen1{
+	z-index:3;
+	background-color:coral;
+}
+#screen2{
+	z-index:2;
+	background-color:beige;
+}
+#screen3{
+	z-index:1;
+	background-color:purple;
+}
+/* Right Grid Configuration */
+#right {
+  width:30%;
+}
+#right > div {
+  position:relative;
+  top:0;
+  left:0;
+  width:100%;
+  height:20%;
+}
+#yr11 {
+  background-color:#24c3ff;
+}
+#yr12{
+  background-color:#0a95b4;
+}
+#classChanges {
+  background-color:#00b230;
+}
+#meetingReminders{
+  background-color:#dcc800;
+}
+#specEvents{
+  background-color:#f9790f;
+}
+#yrLvllTitle{
+    margin:0;
+    text-align:center;
+    font-size:2em;
+}
+.classLine{
+    text-align:center;
+    margin:0;
+		padding:0;
+}
+.currentPeriod{
+    font-size:3.5em;
+}
+.nextPeriod{
+    font-size:2em;
+}
