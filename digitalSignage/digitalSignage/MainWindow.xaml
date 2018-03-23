@@ -1,0 +1,164 @@
+﻿<Window x:Class="digitalSignage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="digitalSignage" Height="1080" Width="1920" WindowState="Maximized" Initialized="Window_Initialized">
+    <!-- Begin making grid to align elements to -->
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <!-- Two outling columns on outer grid, 0.7* = 70% and 0.3* = 30% -->
+            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!-- Select grid column 1 (30% [with class and notices]) -->
+        <Grid Grid.Column="1" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <!-- Create another grid inside first to separate into different sub rows -->
+                <RowDefinition Height="0.2*"></RowDefinition>
+                <RowDefinition Height="0.2*"></RowDefinition>
+                <RowDefinition Height="0.2*"></RowDefinition>
+                <RowDefinition Height="0.2*"></RowDefinition>
+                <RowDefinition Height="0.2*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!-- Separate grid outlining Yr 12 line elements -->
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="237*"/>
+                    <ColumnDefinition Width="337*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="0.4*"></RowDefinition>
+                    <RowDefinition Height="0.4*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Content="Yr 12" Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF24C3FF" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" FontSize="24" Grid.ColumnSpan="2"/>
+                <Label x:Name="yr12FirstLine" Grid.Column="0" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" Background="#FF24C3FF" Grid.ColumnSpan="2" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book"/>
+                <Label x:Name="yr12SecondLine" Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="62" Background="#FF24C3FF" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" Grid.ColumnSpan="2"/>
+            </Grid>
+
+            <!-- Separate grid outlining Yr 11 line elements -->
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="0.4*"></RowDefinition>
+                    <RowDefinition Height="0.4*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Content="Yr 11" Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF0A95B4" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" FontSize="24" Grid.ColumnSpan="2"/>
+                <Label x:Name="yr11FirstLine" Grid.Column="0" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" Background="#FF0A95B4" Grid.ColumnSpan="2" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book"/>
+                <Label x:Name="yr11SecondLine" Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="62" Background="#FF0A95B4" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" Grid.ColumnSpan="2"/>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="0.15*"></RowDefinition>
+                    <RowDefinition Height="0.65*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Content="Classroom Changes" Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" FontSize="24" Background="#FF00B230"/>
+                <!--<TextBlock TextWrapping="Wrap" Grid.Column="0" Grid.Row="1"  TextAlignment="Justify" Foreground="Black" Background="#FF00B230" FontSize="28" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book">
+                    a
+                </TextBlock>-->
+                <Label xml:space="preserve" Content="Teacher    Line    Period      Room" Grid.Column="0" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" Background="#FF00B230" FontSize="18"/>
+                <Grid Grid.Column="0" Grid.Row="2" Background="#FF00B230">
+                    <!--<ListBox  HorizontalContentAlignment="Center" Background="#FF00B230" Grid.Column="0" Grid.Row="0" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" FontSize="10" Grid.ColumnSpan="4" BorderThickness="0" >
+                        FUTURE IMPLEMENTATION
+                        <ListBox.Resources>
+                            <Style TargetType="{x:Type ListBoxItem}">
+                                <Setter Property="xml:space" Value="preserve"/>
+                            </Style>
+                        </ListBox.Resources>
+                        
+                    </ListBox>-->
+                    <TextBlock x:Name="classChangesBox" TextWrapping="Wrap" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" FontSize="20" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" TextAlignment="Center"/>
+                </Grid>                
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="0.8*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" Content="Meeting Reminders" Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" Background="#FFDCC800"/>
+                <!--<TextBlock TextWrapping="Wrap" Grid.Column="0" Grid.Row="1"  TextAlignment="Justify" Foreground="Black" Background="#FF00B230" FontSize="28" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book">
+                    a
+                </TextBlock>-->
+                <Grid Grid.Column="0" Background="#FFDCC800" Grid.Row="1" Margin="0,-2,0,0">
+                    <!--<ListBox  HorizontalContentAlignment="Center" Background="#FF00B230" Grid.Column="0" Grid.Row="0" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" FontSize="10" Grid.ColumnSpan="4" BorderThickness="0" >
+                        FUTURE IMPLEMENTATION
+                        <ListBox.Resources>
+                            <Style TargetType="{x:Type ListBoxItem}">
+                                <Setter Property="xml:space" Value="preserve"/>
+                            </Style>
+                        </ListBox.Resources>
+                        
+                    </ListBox>-->
+                    <TextBlock x:Name="meetingChangesBox" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" FontSize="20" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="0.8*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Content="Special Events" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" Background="#FFF9790F"/>
+                <!--<TextBlock TextWrapping="Wrap" Grid.Column="0" Grid.Row="1"  TextAlignment="Justify" Foreground="Black" Background="#FF00B230" FontSize="28" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book">
+                    a
+                </TextBlock>-->
+                <Grid Grid.Column="0" Background="#FFF9790F" Margin="0,37,0,0" Grid.RowSpan="2">
+                    <!--<ListBox  HorizontalContentAlignment="Center" Background="#FF00B230" Grid.Column="0" Grid.Row="0" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" FontSize="10" Grid.ColumnSpan="4" BorderThickness="0" >
+                        FUTURE IMPLEMENTATION
+                        <ListBox.Resources>
+                            <Style TargetType="{x:Type ListBoxItem}">
+                                <Setter Property="xml:space" Value="preserve"/>
+                            </Style>
+                        </ListBox.Resources>
+                        
+                    </ListBox>-->
+                    <TextBlock x:Name="specEventsBox" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" FontSize="20" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                </Grid>
+            </Grid>
+        </Grid>
+        <!-- Background image of grid, final program will contain this in PE (portable executable) code as an object
+        Note: not using background image just solid black 
+        <Image HorizontalAlignment="Stretch" Grid.Column="0" Grid.Row="0" VerticalAlignment="Stretch" Source="D:\Documents\Google Drive\School\IPT\Year 12\Term 1\digitalSignage\gridBackground.png" Stretch="UniformToFill" Opacity="0"/>
+        Construct two labels in order to hold rss headline and blurb -->
+
+        <!--<Label Content="Coordinate Calendars and Meeting Times in Google Calendar" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" FontSize="24" Foreground="White"/>
+        <Label Content="A major challenge with any #worksquad is making sure you're all available for meetings at the same time, especially if you're working in various time zones. The post Coordinate Calendars and Meeting Times in Google Calendar appeared first on WIRED." FontFamily="/digitalSignage;component/Fonts/#Futura Std Book" FontSize="24" Foreground="White"/>
+        -->
+        <!--<Image Source="http://www.wired.com/wp-content/uploads/2016/04/google-calendar-icon-ft-660x371.jpg" Margin="20,0">
+            <Image.OpacityMask>-->
+        <!--<DropShadowBitmapEffect Color="Black" Direction="90" ShadowDepth="10" Opacity="1" Softness="9"/>-->
+        <!--        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                    <GradientStop Offset="0.0" Color="#00000000" />
+                    <GradientStop Offset="0.25" Color="#FF000000" />
+                    <GradientStop Offset="0.75" Color="#FF000000" />
+                    <GradientStop Offset="1" Color="#00000000" />                    
+                </LinearGradientBrush>
+            </Image.OpacityMask>
+        </Image>-->
+
+        <Image x:Name="newsImage" Margin="20">
+            <Image.OpacityMask>
+                <!--<DropShadowBitmapEffect Color="Black" Direction="90" ShadowDepth="10" Opacity="1" Softness="9"/>-->
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                    <GradientStop Offset="0.0" Color="#00000000" />
+                    <GradientStop Offset="0.25" Color="#FF000000" />
+                    <GradientStop Offset="0.75" Color="#FF000000" />
+                    <GradientStop Offset="1" Color="#00000000" />
+                </LinearGradientBrush>
+            </Image.OpacityMask>
+        </Image>
+        <TextBlock x:Name="newsTitle" TextWrapping="Wrap" Foreground="White" FontSize="56" HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center" Margin="40,40,40,0" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book">
+            <TextBlock.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" Direction="180" ShadowDepth="10" Opacity="1" Softness="9"/>
+            </TextBlock.BitmapEffect>
+            Rss Feed Title
+        </TextBlock>
+
+        <TextBlock x:Name="newsAbstract" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Justify" Foreground="White" FontSize="28" VerticalAlignment="Bottom" Margin="40,0,40,40" FontFamily="/digitalSignage;component/Fonts/#Futura Std Book">
+            Rss Feed news abstract
+        </TextBlock>
+    </Grid>
+</Window>
