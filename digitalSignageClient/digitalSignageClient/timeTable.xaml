@@ -1,0 +1,610 @@
+﻿<Window x:Class="digitalSignageClient.timeTable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Timetable" Height="500" Width="800" WindowState="Maximized" Icon="crest.ico">
+    <Grid>
+        <Label Content="Timetable Configuration" VerticalAlignment="Top" Margin="10,0,0,0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="24" HorizontalAlignment="Left"/>
+
+        <StackPanel VerticalAlignment="Top">
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Label Content="Yr:" VerticalAlignment="Top" Margin="0,0,0,0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" HorizontalAlignment="Center"/>
+                <ComboBox x:Name="yrLevel" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="120" Margin="5,0,10,0">
+                    <ComboBoxItem Content="11"/>
+                    <ComboBoxItem Content="12"/>
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+        <!--<StackPanel VerticalAlignment="Top">
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Label Content="Mon" VerticalAlignment="Top" Margin="0,41,0,0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" HorizontalAlignment="Left"/>
+                <Label Content="Tue" VerticalAlignment="Top" Margin="0,41,0,0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" HorizontalAlignment="Left"/>
+                <Label Content="Wed" VerticalAlignment="Top" Margin="0,41,0,0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" HorizontalAlignment="Left"/>
+                <Label Content="Thu" VerticalAlignment="Top" Margin="0,41,0,0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" HorizontalAlignment="Left"/>
+                <Label Content="Fri" VerticalAlignment="Top" Margin="0,41,0,0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" HorizontalAlignment="Left"/>
+                <Label Content="Mon" VerticalAlignment="Top" Margin="0,41,0,0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" HorizontalAlignment="Left"/>
+                <Label Content="Tue" VerticalAlignment="Top" Margin="0,41,0,0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" HorizontalAlignment="Left"/>
+                <Label Content="Wed" VerticalAlignment="Top" Margin="0,41,0,0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" HorizontalAlignment="Left"/>
+                <Label Content="Thu" VerticalAlignment="Top" Margin="0,41,0,0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" HorizontalAlignment="Left"/>
+                <Label Content="Fri" VerticalAlignment="Top" Margin="0,41,0,0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" HorizontalAlignment="Left"/>
+            </StackPanel>
+        </StackPanel>-->
+        
+        <Grid Height="Auto" VerticalAlignment="Stretch" Margin="0,41,0,74">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"></RowDefinition>
+                <RowDefinition Height="0.15*"></RowDefinition>
+                <RowDefinition Height="0.15*"></RowDefinition>
+                <RowDefinition Height="0.15*"></RowDefinition>
+                <RowDefinition Height="0.15*"></RowDefinition>
+                <RowDefinition Height="0.15*"></RowDefinition>
+                <RowDefinition Height="0.15*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Mon" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" />
+            <Label Content="Tue" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" />
+            <Label Content="Wed" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" />
+            <Label Content="Thu" Grid.Column="3" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" />
+            <Label Content="Fri" Grid.Column="4" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" />
+            <Label Content="Mon" Grid.Column="5" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" />
+            <Label Content="Tue" Grid.Column="6" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" />
+            <Label Content="Wed" Grid.Column="7" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" />
+            <Label Content="Thu" Grid.Column="8" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" />
+            <Label Content="Fri" Grid.Column="9" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="16" />
+
+            <ComboBox x:Name="lne6mon1" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne1mon1" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne2mon1" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne3mon1" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne4mon1" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne5mon1" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne6tue1" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne1tue1" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne2tue1" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne3tue1" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne4tue1" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne5tue1" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne6wed1" Grid.Column="2" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne1wed1" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne2wed1" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne3wed1" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne4wed1" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne5wed1" Grid.Column="2" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne6thu1" Grid.Column="3" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne1thu1" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne2thu1" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne3thu1" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne4thu1" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne5thu1" Grid.Column="3" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne6fri1" Grid.Column="4" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne1fri1" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne2fri1" Grid.Column="4" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne3fri1" Grid.Column="4" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne4fri1" Grid.Column="4" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne5fri1" Grid.Column="4" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne6mon2" Grid.Column="5" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne1mon2" Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne2mon2" Grid.Column="5" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne3mon2" Grid.Column="5" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne4mon2" Grid.Column="5" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne5mon2" Grid.Column="5" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne6tue2" Grid.Column="6" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne1tue2" Grid.Column="6" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne2tue2" Grid.Column="6" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne3tue2" Grid.Column="6" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne4tue2" Grid.Column="6" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne5tue2" Grid.Column="6" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne6wed2" Grid.Column="7" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne1wed2" Grid.Column="7" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne2wed2" Grid.Column="7" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne3wed2" Grid.Column="7" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne4wed2" Grid.Column="7" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne5wed2" Grid.Column="7" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne6thu2" Grid.Column="8" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne1thu2" Grid.Column="8" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne2thu2" Grid.Column="8" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne3thu2" Grid.Column="8" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne4thu2" Grid.Column="8" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne5thu2" Grid.Column="8" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne6fri2" Grid.Column="9" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne1fri2" Grid.Column="9" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne2fri2" Grid.Column="9" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne3fri2" Grid.Column="9" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne4fri2" Grid.Column="9" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+
+            <ComboBox x:Name="lne5fri2" Grid.Column="9" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Width="auto">
+                <ComboBoxItem Content="A"/>
+                <ComboBoxItem Content="B"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="D"/>
+                <ComboBoxItem Content="E"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+        </Grid>
+
+        <Button Content="Submit" VerticalAlignment="Bottom" x:Name="submitButton"  HorizontalAlignment="Center" FontSize="15" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" Margin="0,0,0,10" BorderThickness="1" Background="#FFDDDDDD" Padding="10" Click="submitButton_Click" Height="54" Width="87" />
+
+    </Grid>
+</Window>

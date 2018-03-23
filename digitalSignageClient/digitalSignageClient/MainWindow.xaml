@@ -1,0 +1,36 @@
+﻿<Window x:Class="digitalSignageClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Signage Client" Height="641.5" Width="478.464" Initialized="Window_Initialized" Icon="crest.ico">
+    <Grid>
+        <Label Content="Signage Client" VerticalAlignment="Top" Margin="0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="48" HorizontalAlignment="Center"/>
+        <StackPanel VerticalAlignment="Top">
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Label Content="Status:" VerticalAlignment="Top" Margin="0,72,0,0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" HorizontalAlignment="Center"/>
+                <Label x:Name="currentStatus"  Content="Disconnected" VerticalAlignment="Top" Margin="0,72,0,0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+        <!--<StackPanel VerticalAlignment="Top" Margin="0,108,0,0">
+            
+        </StackPanel>-->
+        <StackPanel VerticalAlignment="Top">
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <TextBox x:Name="txtBoxIPAddress" Text="IP Address" VerticalContentAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Margin="0,108,0,0" Height="auto" TextWrapping="Wrap" Width="200" BorderThickness="1"/>
+                <Button x:Name="connectButton" Grid.Column="0" Grid.Row="0" Content="Connect" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" Margin="0,108,0,0" BorderThickness="1" Background="#FFDDDDDD" Padding="10" Click="connectButton_Click" />
+            </StackPanel>
+        </StackPanel>
+        
+        
+        <Grid Height="Auto" VerticalAlignment="Stretch" Margin="0,149,0,41">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.333333333*"></RowDefinition>
+                <RowDefinition Height="0.333333333*"></RowDefinition>
+                <RowDefinition Height="0.333333333*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="noticesButton" Grid.Row="0" Content="Set Notices" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" Margin="0,20" BorderThickness="1" Background="#FFDDDDDD" Padding="25,10" Click="noticesButton_Click" />
+            <Button x:Name="rssButton" Grid.Column="0" Grid.Row="1" Content="Set Rss Links" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" Margin="0,20,1,20" BorderThickness="1" Background="#FFDDDDDD" Padding="18,10" Click="rssButton_Click" />
+            <Button x:Name="timetableButton" Grid.Column="0" Grid.Row="2" Content="Set Timetable" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" Margin="0,20" BorderThickness="1" Background="#FFDDDDDD" Padding="10" Click="timetableButton_Click" />
+        </Grid>
+        <Label Content="© Lachlan Stevens 2016 ©" VerticalAlignment="Bottom" Margin="0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="24" HorizontalAlignment="Center" ToolTip="Email: Lachlan.Stevens@outlook.com"/>
+    </Grid>
+</Window>

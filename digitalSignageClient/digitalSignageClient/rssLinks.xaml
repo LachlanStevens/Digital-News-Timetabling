@@ -1,0 +1,35 @@
+﻿<Window x:Class="digitalSignageClient.rssLinks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Rss Updater" Height="537" Width="924" Icon="crest.ico">
+    <Grid>
+        <Label Content="Rss Updater" VerticalAlignment="Top" Margin="0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="48" HorizontalAlignment="Center"/>
+        <Grid Height="Auto" VerticalAlignment="Stretch" Margin="0,72,0,63">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"></RowDefinition>
+                <RowDefinition Height="0.18*"></RowDefinition>
+                <RowDefinition Height="0.18*"></RowDefinition>
+                <RowDefinition Height="0.18*"></RowDefinition>
+                <RowDefinition Height="0.18*"></RowDefinition>
+                <RowDefinition Height="0.18*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                <ColumnDefinition Width="0.8*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Content="Title" Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom" Margin="0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" HorizontalAlignment="Center"/>
+            <Label Content="Link" Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" Margin="0" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" HorizontalAlignment="Center"/>
+            <TextBox x:Name="firstTitle" Grid.Column="0" Grid.Row="1" Text="Title 1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Height="auto" TextWrapping="Wrap" Width="auto" BorderThickness="1"/>
+            <TextBox x:Name="firstLink" Grid.Column="1" Grid.Row="1" Text="http://www.example1.com/" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Height="auto" TextWrapping="Wrap" Width="auto" BorderThickness="1"/>
+            <TextBox x:Name="secondTitle" Grid.Column="0" Grid.Row="2" Text="Title 2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Height="auto" TextWrapping="Wrap" Width="auto" BorderThickness="1"/>
+            <TextBox x:Name="secondLink" Grid.Column="1" Grid.Row="2" Text="http://www.example2.com/" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Height="auto" TextWrapping="Wrap" Width="auto" BorderThickness="1"/>
+            <TextBox x:Name="thirdTitle" Grid.Column="0" Grid.Row="3" Text="Title 3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Height="auto" TextWrapping="Wrap" Width="auto" BorderThickness="1"/>
+            <TextBox x:Name="thirdLink" Grid.Column="1" Grid.Row="3" Text="http://www.example3.com/" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Height="auto" TextWrapping="Wrap" Width="auto" BorderThickness="1"/>
+            <TextBox x:Name="fourthTitle" Grid.Column="0" Grid.Row="4" Text="Title 4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Height="auto" TextWrapping="Wrap" Width="auto" BorderThickness="1"/>
+            <TextBox x:Name="fourthLink" Grid.Column="1" Grid.Row="4" Text="http://www.example4.com/" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Height="auto" TextWrapping="Wrap" Width="auto" BorderThickness="1"/>
+            <TextBox x:Name="fifthTitle" Grid.Column="0" Grid.Row="5" Text="Title 5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Height="auto" TextWrapping="Wrap" Width="auto" BorderThickness="1"/>
+            <TextBox x:Name="fifthLink" Grid.Column="1" Grid.Row="5" Text="http://www.example5.com/" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" FontSize="20" Height="auto" TextWrapping="Wrap" Width="auto" BorderThickness="1"/>
+        </Grid>
+        <Button x:Name="submitButton" Grid.Column="0" Grid.Row="2" Content="Update Rss" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="20" FontFamily="/digitalSignageClient;component/Fonts/#Futura Std Book" Margin="0,0,0,10" BorderThickness="1" Background="#FFDDDDDD" Padding="10" Click="submitButton_Click" />
+    </Grid>
+</Window>
